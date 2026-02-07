@@ -1,19 +1,54 @@
-Take Control of Your YouTube Experience
-YouTube Focus Mode is the ultimate productivity tool for students, professionals, and anyone who wants to use YouTube without getting sucked into the "algorithm rabbit hole."
+# 🎯 YouTube Focus Mode
 
-🚀 Key Features
-🚫 Block Distractions: Instantly hide the Comments Section, Related Videos Sidebar, and Merchandise Shelves.
-🛡️ Stop Doomscrolling: Automatically redirects Shorts to the normal video player, breaking the infinite scroll loop.
-🎓 Productivity Mode (Study Only): A strict "Search Only" mode that completely hides the Home Feed recommendations. If you need to find a tutorial, you can search for it without seeing a wall of unrelated videos.
-🌑 Dark Mode UI: A beautiful, modern interface that matches your browser's aesthetic.
-⚡ Lightning Fast: Uses advanced MutationObserver technology to hide elements before they appear on screen. No flickering, no lag.
-🔒 Privacy Focused
-No tracking.
-No analytics.
-No data collection.
-Open source philosophy.
-🔧 How to Use
-Click the extension icon.
-Toggle Focus Mode to clean up video pages.
-Toggle Study Mode when you need to focus purely on learning.
-Perfect for exam preparation, deep work sessions, or just a calmer browsing experience.
+**Reclaim your attention.** A minimal, privacy-focused browser extension that removes distractions from YouTube.
+
+![Focus Mode Banner](header_bg.png)
+
+## 🚀 Features
+
+-   **Focus Mode**: Hides comments, sidebar recommendations, merchandise shelves, and other clutter on video pages.
+-   **Productivity Mode (Study Mode)**: A strict "Search Only" experience. Completely hides the Home Feed, leaving only the search bar. Perfect for studying or deep work.
+-   **Shorts Blocker**: Automatically redirects YouTube Shorts (`/shorts/video-id`) to the standard video player (`/watch?v=video-id`), preventing the "infinite scroll" trap.
+-   **Dark Mode UI**: Beautiful, modern popup interface with glassmorphism effects.
+-   **Lightning Fast**: Uses `MutationObserver` to hide elements *before* they render, preventing layout shifts.
+-   **Cross-Browser**: Compatible with Chrome, Edge, Brave, and Firefox (Manifest V3).
+
+## 📥 Installation
+
+### From Source (Developer Mode)
+
+1.  **Clone or Download** this repository.
+2.  **Chrome / Edge / Brave**:
+    -   Go to `chrome://extensions`.
+    -   Enable **Developer Mode** (top right).
+    -   Click **Load unpacked**.
+    -   Select the `youtube-focus-mode` folder.
+3.  **Firefox**:
+    -   Go to `about:debugging#/runtime/this-firefox`.
+    -   Click **Load Temporary Add-on...**.
+    -   Select the `manifest.json` file.
+
+## 🛠️ Usage
+
+1.  Click the extension icon in your browser toolbar.
+2.  **Focus Mode**: Toggle ON to clean up video pages (comments, sidebar).
+3.  **Study Mode**: Toggle ON to hide the home feed entirely (search only).
+4.  Settings are saved automatically and synced across your browser.
+
+## 🔒 Privacy Policy
+
+**We do not collect any data.**
+
+-   **No Analytics**: We do not track your usage.
+-   **No Remote Code**: All logic runs locally on your device.
+-   **No Data Transmission**: The extension does not send any data to external servers.
+-   **Permissions**:
+    -   `storage`: Used only to save your "Focus" and "Study" toggle preferences locally.
+
+## 📜 License
+
+This project is licensed under the **Mozilla Public License 2.0**.
+You are free to use, modify, and distribute this software.
+
+---
+*Not affiliated with YouTube or Google Inc.*

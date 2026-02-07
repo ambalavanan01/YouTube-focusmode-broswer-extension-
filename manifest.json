@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube - Focus Mode",
+    "version": "1.0.1",
+    "description": "A clean, fast focus mode for YouTube that hides distractions.",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "YouTube - Focus Mode"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "icons": {
+        "16": "icon16_v2.png",
+        "32": "icon32_v2.png",
+        "48": "icon48_v2.png",
+        "128": "icon128_v2.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "youtube-focus-mode@user.dev",
+            "strict_min_version": "109.0",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ],
+                "ip_address": false,
+                "technical_data": false,
+                "interaction_data": false,
+                "social_data": false
+            }
+        }
+    }
+}

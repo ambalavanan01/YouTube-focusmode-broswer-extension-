@@ -1,0 +1,82 @@
+/* 
+  YouTube Focus Mode Styles 
+  
+  Two Main Modes:
+  1. Focus Mode (.yt-focus-mode-active): Hides distractions on Watch Page and Sidebar.
+  2. Productivity Mode (.yt-study-mode-active): Hides the Home Feed completely (Search Only).
+*/
+
+/* ==========================================================================
+   FOCUS MODE (Standard Distraction Removal - Watch Page)
+   ========================================================================== */
+
+/* ==========================================================================
+   FOCUS MODE (Standard Distraction Removal - Watch Page)
+   ========================================================================== */
+
+/* 1. Hide Comments (Universal) */
+html.yt-focus-mode-active #comments,
+html.yt-focus-mode-active ytd-comments,
+html.yt-focus-mode-active ytd-item-section-renderer[section-identifier="comment-item-section"] {
+  display: none !important;
+}
+
+/* 2. Hide Sidebar Recommendations (Watch Page) */
+html.yt-focus-mode-active #secondary,
+html.yt-focus-mode-active #related,
+html.yt-focus-mode-active ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* 3. Hide Shorts Everywhere */
+/* Home/Search Shelves */
+html.yt-focus-mode-active ytd-rich-shelf-renderer[is-shorts],
+html.yt-focus-mode-active ytd-reel-shelf-renderer,
+/* Navigation Sidebar Items */
+html.yt-focus-mode-active ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html.yt-focus-mode-active ytd-mini-guide-entry-renderer:has(a[title="Shorts"]) {
+  display: none !important;
+}
+
+/* 4. Hide "Explore" & "More from YouTube" Sidebar Sections */
+html.yt-focus-mode-active ytd-guide-section-renderer:has(a[href="/feed/trending"]),
+html.yt-focus-mode-active ytd-guide-section-renderer:has(a[href="/feed/storefront"]),
+html.yt-focus-mode-active ytd-guide-section-renderer:has(a[href="/gaming"]),
+html.yt-focus-mode-active ytd-guide-section-renderer:has(yt-icon[icon="youtube_music_color_24"]),
+html.yt-focus-mode-active ytd-guide-section-renderer:has(yt-icon[icon="clapperboard"]) {
+  display: none !important;
+}
+
+/* 5. Hide Merch, Offers, Tickets, Mixes */
+html.yt-focus-mode-active ytd-merch-shelf-renderer,
+html.yt-focus-mode-active .ytd-merch-shelf-renderer,
+html.yt-focus-mode-active ytd-donation-shelf-renderer,
+html.yt-focus-mode-active #offer-module,
+html.yt-focus-mode-active #ticket-shelf {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   PRODUCTIVITY MODE (Strict Study - Home Page Nuke)
+   ========================================================================== */
+
+/* 1. NUCLEAR: Hide the entire Home Feed Content and Filter Chips */
+html.yt-study-mode-active ytd-browse[page-subtype="home"] #primary,
+html.yt-study-mode-active ytd-browse[page-subtype="home"] #contents,
+html.yt-study-mode-active ytd-feed-filter-chip-bar-renderer,
+html.yt-study-mode-active #chips-wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+}
+
+/* 2. Hide Sidebar Distractions */
+html.yt-study-mode-active ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html.yt-study-mode-active ytd-mini-guide-entry-renderer:has(a[title="Shorts"]),
+html.yt-study-mode-active ytd-guide-section-renderer:has(a[href="/feed/trending"]),
+html.yt-study-mode-active ytd-guide-section-renderer:has(a[href="/feed/storefront"]),
+html.yt-study-mode-active ytd-guide-section-renderer:has(a[href="/gaming"]) {
+  display: none !important;
+}
