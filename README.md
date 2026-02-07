@@ -2,7 +2,6 @@
 
 **Reclaim your attention.** A minimal, privacy-focused browser extension that removes distractions from YouTube.
 
-![Focus Mode Banner](header_bg.png)
 
 ## 🚀 Features
 
@@ -52,3 +51,4 @@ You are free to use, modify, and distribute this software.
 
 ---
 *Not affiliated with YouTube or Google Inc.*
+
